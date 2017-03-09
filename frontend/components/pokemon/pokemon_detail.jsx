@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 class PokemonDetail extends React.Component {
   constructor(props) {
@@ -22,7 +23,11 @@ class PokemonDetail extends React.Component {
     let items = [];
     if (this.props.poke.items) {
       items = poke.items
-        .map(item => <li key={item.name}> {item.name} </li>);
+        .map(item => <li key={item.name}>
+          <Link to={`/pokemon/${poke.id}/items/${item.id}`}>
+            {item.name}
+          </Link>
+        </li>);
     }
     // debugger;
     return (
@@ -35,6 +40,7 @@ class PokemonDetail extends React.Component {
         <ul>
           {items}
         </ul>
+        {this.props.children}
       </div>
     );
   }
