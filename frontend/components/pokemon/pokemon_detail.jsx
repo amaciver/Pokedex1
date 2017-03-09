@@ -16,7 +16,6 @@ class PokemonDetail extends React.Component {
       this.props.requestSinglePokemon(newProps.params.pokemonId);
     }
   }
-  // {poke.items.map(item => <li key={item.name} item={item}> {item.name} </li>)}
 
   render() {
     const {poke} = this.props;
