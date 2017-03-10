@@ -42,7 +42,7 @@ class PokemonForm extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="pokemonForm">
         <ul>
           {this.props.errors}
         </ul>

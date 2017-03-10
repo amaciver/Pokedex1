@@ -1,3 +1,109 @@
 // Place all the styles related to the Pokemons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.main {
+  display: flex;
+
+}
+
+.pokedex {
+  margin-top: 30px;
+  width: 15%;
+  font-family: 'Bangers', cursive;
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-size: 16px;
+  a {
+    text-decoration: none;
+  }
+  li {
+    list-style-image: url('http://literecords.com/x2/images/smilies/pokeball.png')
+  }
+
+}
+
+.pokemonDetail {
+  margin-top: 30px;
+  width: 85%;
+  position: fixed;
+  left: 15%;
+
+  margin: 0, auto;
+  background: $red;
+  font-size: 40px;
+  letter-spacing: 3px;
+  color: white;
+  font-family: 'Bangers', cursive;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+.pokemonDetail li {
+  list-style-type: none;
+}
+
+.detailLogo {
+  display: flex;
+  width: 100%;
+  height: 15%;
+  justify-content: center;
+}
+
+.detailsBox {
+  display: flex;
+  flex-direction: row;
+}
+
+.detailBox {
+  display: flex;
+  flex-direction: row;
+  width: 33%;
+  justify-content: center;
+
+}
+
+.itemsBox {
+  display: flex;
+  width: 33%;
+  justify-content: center;
+  align-items: flex-end;
+  li {
+    font-size: 18px;
+    list-style-type: none;
+  }
+}
+
+
+
+.itemBox {
+  display: flex;
+  font-size: 24px;
+  width: 33%;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.pokemonForm {
+  display: flex;
+  width: 85%;
+  margin: 0, auto;
+  background: $red;
+  font-size: 40px;
+  letter-spacing: 3px;
+  color: white;
+  font-family: 'Bangers', cursive;
+  font-weight: 500;
+  justify-content: center;
+  input {
+    font-family: 'Bangers', cursive;
+
+  }
+}
+
+.itemLink {
+  font-size: 24px;
+  text-decoration: none;
+}

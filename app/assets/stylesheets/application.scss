@@ -31,7 +31,8 @@ header {
   display: flex;
   justify-content: center;
   background-color: $red;
-
+  position: fixed;
+  width: 100%;
   img {
     width: 43px;
     height: 43px;

@@ -23,7 +23,7 @@ class PokemonDetail extends React.Component {
     if (this.props.poke.items) {
       items = poke.items
         .map(item => <li key={item.name}>
-          <Link to={`/pokemon/${poke.id}/items/${item.id}`}>
+          <Link className="itemLink" to={`/pokemon/${poke.id}/items/${item.id}`}>
             {item.name}
           </Link>
         </li>);
@@ -31,15 +31,32 @@ class PokemonDetail extends React.Component {
     // debugger;
     return (
       <div>
-        <img height="250" width="250" src={poke.image_url}/><br/>
-        <li>name: {poke.name}</li>
-        <li>type: {poke.poke_type}</li>
-        <li>attack: {poke.attack}</li>
-        <li>defense: {poke.defense}</li>
-        <ul>
-          {items}
-        </ul>
-        {this.props.children}
+        <div className="pokemonDetail">
+          <div className="detailLogo">
+            <img src="http://vignette3.wikia.nocookie.net/logopedia/images/e/e5/Pokemon_logo.png/revision/latest?cb=20120128115827"
+               />
+          </div>
+          <div className="detailsBox">
+            <div className="detailBox">
+              <ul>
+                <img height="250" width="250" src={poke.image_url}/><br/>
+                <li>name: {poke.name}</li>
+                <li>type: {poke.poke_type}</li>
+                <li>attack: {poke.attack}</li>
+                <li>defense: {poke.defense}</li>
+              </ul>
+            </div>
+            <div className="itemsBox">
+              <ul>
+                ITEMS:
+                {items}
+              </ul>
+
+
+            </div>
+            {this.props.children}
+          </div>
+        </div>
       </div>
     );
   }
