@@ -86,8 +86,12 @@
   align-items: flex-end;
 }
 
-.pokemonForm {
+.pokemonFormBox {
   display: flex;
+
+
+  margin-top: 30px;
+  padding-top: 70px;
   width: 85%;
   margin: 0, auto;
   background: $red;
@@ -97,10 +101,37 @@
   font-family: 'Bangers', cursive;
   font-weight: 500;
   justify-content: center;
-  input {
-    font-family: 'Bangers', cursive;
 
+  input {
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Bangers', cursive;
   }
+
+  select {
+    font-family: 'Bangers', cursive;
+    font-size: 30px;
+    option {
+      font-family: 'Bangers', cursive;
+      font-size: 30px;
+    }
+  }
+
+  button {
+    font-size: 30px;
+    font-family: 'Bangers', cursive;
+  }
+}
+
+.errorsBox {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+}
+
+.pokemonForm {
+  width: 50%;
+
 }
 
 .itemLink {

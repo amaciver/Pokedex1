@@ -42,11 +42,11 @@ class PokemonForm extends React.Component {
 
   render() {
     return(
-      <div className="pokemonForm">
-        <ul>
+      <div className="pokemonFormBox">
+        <ul className="errorsBox">
           {this.props.errors}
         </ul>
-        <form>
+        <form className="pokemonForm">
           <input type="text" onChange={this.update('name')} value={this.state.name} placeholder="Name"/><br/>
           <select value={this.state.poke_type} onChange={this.update('poke_type')}>
             <option disabled value="please" >select poke type</option>
